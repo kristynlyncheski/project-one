@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Game</title>
+    <link rel="stylesheet" href="./css/style.css" media="screen" title="no title" charset="utf-8">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans|Permanent+Marker' rel='stylesheet' type='text/css'>
+  </head>
+  <body>
+    <div class="container">
+      <div class="grid">
+
+        <!--opening page-->
+        <div class="opening-page hidden">
+
+          <div class="logo">
+            <h1>Yahtzee</h1>
+          </div>
+
+          <div class="cta">
+            <button type="button" name="start">Start Game!</button>
+          </div>
+
+          <div class="info">
+            <p>Instructions</p>
+          </div>
+
+        </div>
+
+        <!--end of opening page-->
+
+        <!--game space-->
+
+        <div class="game">
+
+          <div class="new-game">
+            <p>Start a new game</p>
+          </div>
+
+          <div class="game-space">
+
+            <div class="rollable-dice">
+
+            </div>
+
+            <div class="roll-cta">
+                <button type="button" name="roll">Roll #1!</button>
+            </div>
+
+
+          </div>
+
+          <div class="scorecards">
+
+            <!--player 1 scorecard-->
+
+            <div class="scorecard player1">
+              <h3>Player 1</h3>
+              <div class="upper-score">
+
+                <div class="score-ones">
+                  <img src="./imgs/score-die-1.png">
+                  <div class="scorecard-score">
+                  </div>
+                </div>
+
+                <div class="score-twos">
+                  <img src="./imgs/score-die-2.png">
+                  <div class="scorecard-score">
+                  </div>
+                </div>
+
+                <div class="score-threes">
+                  <img src="./imgs/score-die-3.png">
+                  <div class="scorecard-score">
+                  </div>
+                </div>
+
+                <div class="score-fours">
+                  <img src="./imgs/score-die-4.png">
+                  <div class="scorecard-score">
+                  </div>
+                </div>
+
+                <div class="score-fives">
+                  <img src="./imgs/score-die-5.png">
+                  <div class="scorecard-score">
+                  </div>
+                </div>
+              </div>
+
+              <div class="score-sixes">
+                <img src="./imgs/score-die-6.png">
+                <div class="scorecard-score">
+                </div>
+              </div>
+
+              <div class="lower-score">
+              </div>
+
+
+            </div>
+
+            <!--end of player 1 scorecard-->
+
+            <!--player 2 scorecard-->
+
+            <div class="scorecard player2">
+
+            </div>
+
+            <!--end of player 2 scorecard-->
+
+          </div>
+
+
+
+        </div>
+
+
+        <!--end of game space-->
+
+
+        <!--results page-->
+
+        <div class="results-page hidden">
+
+            <div class="score">
+              <p>Player 1: <span class="p1score"></span></p>
+              <p>Player 2: <span class="p2score"></span></p>
+            </div>
+
+            <h1>Player <span class="winner"></span> wins!</h1>
+            <p class="final-score"></p>
+
+
+          <div class="cta">
+            <button type="button" name="play-again">Play again?</button>
+          </div>
+
+        </div>
+
+        <!--end of results page-->
+
+      </div>
+    </div>
+  </body>
+</html>
