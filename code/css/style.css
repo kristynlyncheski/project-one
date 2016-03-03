@@ -2,6 +2,7 @@
   width:100%;
   box-sizing: border-box;
   font-family:'Open Sans', Arial, sans-serif;
+  font-weight:300;
 }
 
 body {
@@ -67,7 +68,32 @@ button {
 
 }
 
+.game-top-row::after {
+  display:block;
+  clear:both;
+  content:"";
+}
+
+.players-turn p {
+  width:50%;
+  float:left;
+  font-size:24px;
+  color:#d3b6af;
+  font-family: 'Permanent Marker', cursive, sans-serif;
+  text-align:left;
+  padding:0 0 0 10px;
+  margin:10px 0;
+}
+
+.player-number {
+  font-size:24px;
+  color:#d3b6af;
+  font-family: 'Permanent Marker', cursive, sans-serif;
+}
+
 .new-game p {
+  width:50%;
+  float:left;
   font-size:24px;
   color:#368f8b;
   font-family: 'Permanent Marker', cursive, sans-serif;
@@ -76,6 +102,24 @@ button {
   margin:10px 0;
 }
 
+.rollable-dice {
+  display:flex;
+  flex-flow:row nowrap;
+  justify-content:space-around;
+  align-items:center;
+  width:85%;
+  margin:0 auto;
+  min-height:175px;
+}
+
+.rolled-die-imgs {
+  max-width:125px;
+  padding:0 5px;
+}
+
+.clicked {
+  opacity: 0.4;
+}
 
 .roll-cta {
   margin:0 auto;
@@ -92,9 +136,15 @@ button[name="roll"] {
   display:block;
 }
 
-.scorecard {
+.player-scorecard-wrapper {
   width:50%;
   float:left;
+}
+
+.scorecard {
+  width:90%;
+  min-height:250px;
+  margin:0 auto;
   text-align:center;
   background:#584d56;
 }
@@ -104,6 +154,26 @@ button[name="roll"] {
   font-size:30px;
   color:#d3b6af;
   text-decoration:underline;
+  padding-top:15px;
+}
+
+.upper-score,
+.lower-score {
+  display:flex;
+  flex-flow:row nowrap;
+  justify-content: space-around;
+  padding:0 20px;
+}
+
+.score-die-imgs {
+  max-width:50px;
+  padding:0 5px;
+}
+
+.scorecard-score {
+  color:#d3b6af;
+  font-size:14px;
+  min-height:30px;
 }
 
 /*Results Page Styles*/
@@ -155,6 +225,8 @@ button[name="roll"] {
   padding:0;
   margin:0;
 }
+
+/*Other Styles*/
 
 .hidden {
   display:none;

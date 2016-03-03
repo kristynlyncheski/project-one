@@ -2,16 +2,17 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>Game</title>
+    <title>Yahtzee</title>
     <link rel="stylesheet" href="./css/style.css" media="screen" title="no title" charset="utf-8">
-    <link href='https://fonts.googleapis.com/css?family=Open+Sans|Permanent+Marker' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="./css/mqs.css" media="screen" title="no title" charset="utf-8">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300|Permanent+Marker' rel='stylesheet' type='text/css'>
   </head>
   <body>
     <div class="container">
       <div class="grid">
 
         <!--opening page-->
-        <div class="opening-page hidden">
+        <div class="opening-page">
 
           <div class="logo">
             <h1>Yahtzee</h1>
@@ -31,20 +32,47 @@
 
         <!--game space-->
 
-        <div class="game">
+        <div class="game hidden">
+          <div class="game-top-row">
 
-          <div class="new-game">
-            <p>Start a new game</p>
+            <div class="players-turn">
+              <p>Player <span class="player-number">1</span>'s turn!</p>
+            </div>
+
+
+            <div class="new-game">
+              <p>Start a new game</p>
+            </div>
           </div>
 
           <div class="game-space">
 
             <div class="rollable-dice">
 
+              <div class="roll-one">
+                <img src="./imgs/die0.png" class="rolled-die-imgs notclicked" alt="">
+              </div>
+
+              <div class="roll-two">
+                <img src="./imgs/die0.png" class="rolled-die-imgs notclicked" alt="">
+              </div>
+
+              <div class="roll-three">
+                <img src="./imgs/die0.png" class="rolled-die-imgs notclicked" alt="">
+              </div>
+
+              <div class="roll-four">
+                <img src="./imgs/die0.png" class="rolled-die-imgs notclicked" alt="">
+              </div>
+
+              <div class="roll-five">
+                <img src="./imgs/die0.png" class="rolled-die-imgs notclicked" alt="">
+              </div>
+
             </div>
 
             <div class="roll-cta">
-                <button type="button" name="roll">Roll #1!</button>
+                <button type="button" name="roll"><span class="roll-number">Roll #1</span>!</button>
             </div>
 
 
@@ -54,50 +82,96 @@
 
             <!--player 1 scorecard-->
 
-            <div class="scorecard player1">
-              <h3>Player 1</h3>
-              <div class="upper-score">
+            <div class="player-scorecard-wrapper">
 
-                <div class="score-ones">
-                  <img src="./imgs/score-die-1.png">
-                  <div class="scorecard-score">
+              <div class="scorecard player1">
+                <h3>Player 1</h3>
+                <div class="upper-score">
+
+                  <div class="score-ones">
+                    <img src="./imgs/score-die1.png" class="score-die-imgs" alt="">
+                    <div class="scorecard-score">
+                    </div>
                   </div>
+
+                  <div class="score-twos">
+                    <img src="./imgs/score-die2.png" class="score-die-imgs" alt="">
+                    <div class="scorecard-score">
+                    </div>
+                  </div>
+
+                  <div class="score-threes">
+                    <img src="./imgs/score-die3.png" class="score-die-imgs" alt="">
+                    <div class="scorecard-score">
+                    </div>
+                  </div>
+
+                  <div class="score-fours">
+                    <img src="./imgs/score-die4.png" class="score-die-imgs" alt="">
+                    <div class="scorecard-score">
+                    </div>
+                  </div>
+
+                  <div class="score-fives">
+                    <img src="./imgs/score-die5.png" class="score-die-imgs" alt="">
+                    <div class="scorecard-score">
+                    </div>
+                  </div>
+
+                  <div class="score-sixes">
+                    <img src="./imgs/score-die6.png" class="score-die-imgs" alt="">
+                    <div class="scorecard-score">
+                    </div>
+                  </div>
+
                 </div>
 
-                <div class="score-twos">
-                  <img src="./imgs/score-die-2.png">
-                  <div class="scorecard-score">
-                  </div>
-                </div>
+                <div class="lower-score">
 
-                <div class="score-threes">
-                  <img src="./imgs/score-die-3.png">
-                  <div class="scorecard-score">
+                  <div class="score-3kind">
+                    <img src="./imgs/score-die-3kind.png" class="score-die-imgs" alt="">
+                    <div class="scorecard-score">
+                    </div>
                   </div>
-                </div>
 
-                <div class="score-fours">
-                  <img src="./imgs/score-die-4.png">
-                  <div class="scorecard-score">
+                  <div class="score-4kind">
+                    <img src="./imgs/score-die-4kind.png" class="score-die-imgs" alt="">
+                    <div class="scorecard-score">
+                    </div>
                   </div>
-                </div>
 
-                <div class="score-fives">
-                  <img src="./imgs/score-die-5.png">
-                  <div class="scorecard-score">
+                  <div class="score-FH">
+                    <img src="./imgs/score-die-FH.png" class="score-die-imgs" alt="">
+                    <div class="scorecard-score">
+                    </div>
                   </div>
+
+                  <div class="score-SS">
+                    <img src="./imgs/score-die-SS.png" class="score-die-imgs" alt="">
+                    <div class="scorecard-score">
+                    </div>
+                  </div>
+
+                  <div class="score-LS">
+                    <img src="./imgs/score-die-LS.png" class="score-die-imgs" alt="">
+                    <div class="scorecard-score">
+                    </div>
+                  </div>
+
+                  <div class="score-chance">
+                    <img src="./imgs/score-die-chance.png" class="score-die-imgs" alt="">
+                    <div class="scorecard-score">
+                    </div>
+                  </div>
+
+                  <div class="score-Y">
+                    <img src="./imgs/score-die-Y.png" class="score-die-imgs" alt="">
+                    <div class="scorecard-score">
+                    </div>
+                  </div>
+
                 </div>
               </div>
-
-              <div class="score-sixes">
-                <img src="./imgs/score-die-6.png">
-                <div class="scorecard-score">
-                </div>
-              </div>
-
-              <div class="lower-score">
-              </div>
-
 
             </div>
 
@@ -105,9 +179,100 @@
 
             <!--player 2 scorecard-->
 
-            <div class="scorecard player2">
+            <div class="player-scorecard-wrapper">
+
+              <div class="scorecard player2">
+                <h3>Player 2</h3>
+                <div class="upper-score">
+
+                  <div class="score-ones">
+                    <img src="./imgs/score-die1.png" class="score-die-imgs" alt="">
+                    <div class="scorecard-score">
+                      20
+                    </div>
+                  </div>
+
+                  <div class="score-twos">
+                    <img src="./imgs/score-die2.png" class="score-die-imgs" alt="">
+                    <div class="scorecard-score">
+                    </div>
+                  </div>
+
+                  <div class="score-threes">
+                    <img src="./imgs/score-die3.png" class="score-die-imgs" alt="">
+                    <div class="scorecard-score">
+                    </div>
+                  </div>
+
+                  <div class="score-fours">
+                    <img src="./imgs/score-die4.png" class="score-die-imgs" alt="">
+                    <div class="scorecard-score">
+                    </div>
+                  </div>
+
+                  <div class="score-fives">
+                    <img src="./imgs/score-die5.png" class="score-die-imgs" alt="">
+                    <div class="scorecard-score">
+                    </div>
+                  </div>
+
+                  <div class="score-sixes">
+                    <img src="./imgs/score-die6.png" class="score-die-imgs" alt="">
+                    <div class="scorecard-score">
+                    </div>
+                  </div>
+
+                </div>
+
+                <div class="lower-score">
+
+                  <div class="score-3kind">
+                    <img src="./imgs/score-die-3kind.png" class="score-die-imgs" alt="">
+                    <div class="scorecard-score">
+                    </div>
+                  </div>
+
+                  <div class="score-4kind">
+                    <img src="./imgs/score-die-4kind.png" class="score-die-imgs" alt="">
+                    <div class="scorecard-score">
+                    </div>
+                  </div>
+
+                  <div class="score-FH">
+                    <img src="./imgs/score-die-FH.png" class="score-die-imgs" alt="">
+                    <div class="scorecard-score">
+                    </div>
+                  </div>
+
+                  <div class="score-SS">
+                    <img src="./imgs/score-die-SS.png" class="score-die-imgs" alt="">
+                    <div class="scorecard-score">
+                    </div>
+                  </div>
+
+                  <div class="score-LS">
+                    <img src="./imgs/score-die-LS.png" class="score-die-imgs" alt="">
+                    <div class="scorecard-score">
+                    </div>
+                  </div>
+
+                  <div class="score-chance">
+                    <img src="./imgs/score-die-chance.png" class="score-die-imgs" alt="">
+                    <div class="scorecard-score">
+                    </div>
+                  </div>
+
+                  <div class="score-Y">
+                    <img src="./imgs/score-die-Y.png" class="score-die-imgs" alt="">
+                    <div class="scorecard-score">
+                    </div>
+                  </div>
+
+                </div>
+              </div>
 
             </div>
+
 
             <!--end of player 2 scorecard-->
 
@@ -135,7 +300,7 @@
 
 
           <div class="cta">
-            <button type="button" name="play-again">Play again?</button>
+            <button type="button" name="play-again">Play Again?</button>
           </div>
 
         </div>
@@ -144,5 +309,8 @@
 
       </div>
     </div>
+
+    <script type="text/javascript" src="./scripts/global.js"></script>
+    <script type="text/javascript" src="./scripts/gameplay.js"></script>
   </body>
 </html>
