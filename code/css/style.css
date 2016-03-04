@@ -176,6 +176,39 @@ button[name="roll"] {
   min-height:30px;
 }
 
+.score-totals {
+  display:flex;
+  flex-flow: row nowrap;
+  justify-content: flex-end;
+  color:#d3b6af;
+}
+
+.lower-score-totals {
+  text-align:right;
+  padding-right: 55px;
+}
+
+.total-titles {
+  font-weight:400;
+  margin-top:10px;
+}
+
+.total-dynamic {
+  font-weight:300px;
+}
+
+.grand-total {
+  color:#d3b6af;
+}
+
+.grand-total-titles {
+  font-family: 'Permanent Marker', cursive, sans-serif;
+  font-size:24px;
+  text-align:left;
+  padding:0 0 15px 30px;
+  margin:0;
+}
+
 /*Results Page Styles*/
 
 .results-page {

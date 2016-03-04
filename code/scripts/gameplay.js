@@ -28,7 +28,7 @@ function startGame(){
   resultsPage.classList.add("hidden");
 
   rollDice();
-  
+
   rollButton.addEventListener("click", function(){
     if (count >= 3) {
       nextPlayer();
@@ -74,11 +74,16 @@ function rollDice() {
   for (var i = 0; i < clicked.length; i++) {
     for (var die in diceObj){
       if (clicked[i].classList.contains(diceObj[die].dieValue)) {
-        currentDice.push(diceObj[die]);
+        console.log("hello");
+        // currentDice.push(diceObj[die]);
+        currentDice.push(diceObj[die].dieValue);
       }
     }
   }
   if (notClicked){
+    for (var i = 0; i < notClicked.length; i++){
+      notClicked[i].className = "rolled-die-imgs notclicked";
+    }
     rollRandom();
   }
 
@@ -99,7 +104,8 @@ function rollRandom() {
         notClicked[i].src = diceObj[die].img;
         notClicked[i].classList.add(diceObj[die].dieValue);
         console.log(notClicked[i]);
-        currentDice.push(diceObj[die]);
+        // currentDice.push(diceObj[die]);
+        currentDice.push(diceObj[die].dieValue);
       }
     }
   }

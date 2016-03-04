@@ -1,4 +1,4 @@
-console.log("scoring js is loaded...");
+console.log("upper scoring js is loaded...");
 
 var scorecardPlayer1 = document.querySelector(".player1");
 
@@ -22,8 +22,8 @@ var fivesP2 = document.querySelector(".player2 .score-fives .scorecard-score");
 var sixesP1 = document.querySelector(".player1 .score-sixes .scorecard-score");
 var sixesP2 = document.querySelector(".player2 .score-sixes .scorecard-score");
 
-
 var counter;
+var currentDiceSorted;
 
 var onesScore;
 var twosScore;
@@ -39,12 +39,23 @@ function checkForScores() {
   checkFours();
   checkFives();
   checkSixes();
+
+
+  currentDiceSorted = currentDice.sort();
+  console.log("currentDice sorted",currentDiceSorted);
+
+  check3Kind(currentDiceSorted);
+  check4Kind(currentDiceSorted);
+  checkYahtzee(currentDiceSorted)
+
+  return currentDiceSorted;
+
 }
 
 function checkOnes() {
   counter = 0;
   for (var i = 0; i < currentDice.length; i++) {
-    if(currentDice[i]["dieValue"] === 1){
+    if(currentDice[i] === 1){
       counter += 1;
       console.log("counter",counter);
     }
@@ -64,7 +75,7 @@ function checkOnes() {
 function checkTwos() {
   counter = 0;
   for (var i = 0; i < currentDice.length; i++) {
-    if(currentDice[i]["dieValue"] === 2){
+    if(currentDice[i] === 2){
       counter += 1;
     }
   }
@@ -81,7 +92,7 @@ function checkTwos() {
 function checkThrees() {
   counter = 0;
   for (var i = 0; i < currentDice.length; i++) {
-    if(currentDice[i]["dieValue"] === 3){
+    if(currentDice[i] === 3){
       counter += 1;
     }
   }
@@ -98,7 +109,7 @@ function checkThrees() {
 function checkFours() {
   counter = 0;
   for (var i = 0; i < currentDice.length; i++) {
-    if(currentDice[i]["dieValue"] === 4){
+    if(currentDice[i] === 4){
       counter += 1;
     }
   }
@@ -115,7 +126,7 @@ function checkFours() {
 function checkFives() {
   counter = 0;
   for (var i = 0; i < currentDice.length; i++) {
-    if(currentDice[i]["dieValue"] === 5){
+    if(currentDice[i] === 5){
       counter += 1;
     }
   }
@@ -132,7 +143,7 @@ function checkFives() {
 function checkSixes() {
   counter = 0;
   for (var i = 0; i < currentDice.length; i++) {
-    if(currentDice[i]["dieValue"] === 6){
+    if(currentDice[i] === 6){
       counter += 1;
     }
   }
