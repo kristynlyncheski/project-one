@@ -44,9 +44,11 @@ function checkForScores() {
   currentDiceSorted = currentDice.sort();
   console.log("currentDice sorted",currentDiceSorted);
 
-  check3Kind(currentDiceSorted);
-  check4Kind(currentDiceSorted);
-  checkYahtzee(currentDiceSorted)
+  // check3Kind(currentDiceSorted);
+  // check4Kind(currentDiceSorted);
+  // checkYahtzee(currentDiceSorted)
+
+  checkForMatch(currentDiceSorted);
 
   return currentDiceSorted;
 
@@ -54,12 +56,10 @@ function checkForScores() {
 
 function checkOnes() {
   counter = 0;
-  for (var i = 0; i < currentDice.length; i++) {
-    if(currentDice[i] === 1){
+    if (currentDice.indexOf(1) > -1) {
       counter += 1;
       console.log("counter",counter);
     }
-  }
   onesScore = parseInt(counter) * 1;
   console.log("onesScore",onesScore);
   console.log("what is the player number?",playerNumber);
@@ -71,6 +71,27 @@ function checkOnes() {
     onesP2.innerText = onesScore;
   }
 }
+
+
+// function checkOnes() {
+//   counter = 0;
+//   for (var i = 0; i < currentDice.length; i++) {
+//     if(currentDice[i] === 1){
+//       counter += 1;
+//       console.log("counter",counter);
+//     }
+//   }
+//   onesScore = parseInt(counter) * 1;
+//   console.log("onesScore",onesScore);
+//   console.log("what is the player number?",playerNumber);
+//   if (playerNumber === 1) {
+//     onesP1.innerText = onesScore;
+//     onesP2.innerText = "";
+//   } else if (playerNumber === 2){
+//     onesP1.innerText = "",
+//     onesP2.innerText = onesScore;
+//   }
+// }
 
 function checkTwos() {
   counter = 0;

@@ -25,7 +25,7 @@ function check3Kind(currentDiceSorted) {
     }
 
     if (counter >= 2) {
-      console.log("counter indicates a match");
+      console.log("counter indicates a 3 of a kind match");
       threeKindScore = 100; // sum of the numbers
       if (playerNumber === 1) {
           threeKindP1.innerText = threeKindScore;
@@ -58,6 +58,7 @@ function check4Kind(currentDiceSorted) {
     }
 
     if (counter >= 3) {
+      console.log("counter indicates 4 of a kind match")
       fourKindScore = 100; // sum of the numbers
       if (playerNumber === 1) {
           fourKindP1.innerText = fourKindScore;

@@ -30,6 +30,11 @@ function startGame(){
   rollDice();
 
   rollButton.addEventListener("click", function(){
+    for (var die in diceObj) {
+      diceObj[die]["count"] = 0;
+    }
+    
+    console.log("diceObj counts should be set back to zero", diceObj);
     if (count >= 3) {
       nextPlayer();
     }
@@ -74,7 +79,6 @@ function rollDice() {
   for (var i = 0; i < clicked.length; i++) {
     for (var die in diceObj){
       if (clicked[i].classList.contains(diceObj[die].dieValue)) {
-        console.log("hello");
         // currentDice.push(diceObj[die]);
         currentDice.push(diceObj[die].dieValue);
       }
