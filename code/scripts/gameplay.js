@@ -6,6 +6,8 @@ var notClicked;
 
 var currentDice;
 
+var checkMatchArray;
+
 startButton.addEventListener("click", function(){
   // openingPage.classList.add("hidden");
   // gamePage.classList.remove("hidden");
@@ -33,8 +35,8 @@ function startGame(){
     for (var die in diceObj) {
       diceObj[die]["count"] = 0;
     }
-    
     console.log("diceObj counts should be set back to zero", diceObj);
+
     if (count >= 3) {
       nextPlayer();
     }

@@ -33,6 +33,11 @@ var fivesScore;
 var sixesScore;
 
 function checkForScores() {
+  currentDiceSorted = currentDice.sort();
+  console.log("currentDice sorted",currentDiceSorted);
+
+  updatingCountInObj(currentDiceSorted);
+
   checkOnes();
   checkTwos();
   checkThrees();
@@ -41,14 +46,10 @@ function checkForScores() {
   checkSixes();
 
 
-  currentDiceSorted = currentDice.sort();
-  console.log("currentDice sorted",currentDiceSorted);
-
-  // check3Kind(currentDiceSorted);
-  // check4Kind(currentDiceSorted);
-  // checkYahtzee(currentDiceSorted)
-
-  checkForMatch(currentDiceSorted);
+  checkChance(currentDiceSorted);
+  checkFullHouse(currentDiceSorted);
+  checkSmStraight(currentDiceSorted);
+  checkLgStraight(currentDiceSorted);
 
   return currentDiceSorted;
 

@@ -75,3 +75,36 @@ function notThreeOfKind() {
     threeKindP2.innerText = 0;
   }
 }
+
+
+
+///////
+
+
+
+function checkForMatch(currentDiceSorted) {
+
+  console.log("the current dice array looks like " + currentDiceSorted);
+
+  // checkMatchArray = [currentDiceSorted[4]];
+  checkMatchArray = [];
+
+  for (var i = 0; i < 5; i++){
+    if (checkMatchArray.length <= 0) {
+      checkMatchArray.push(currentDiceSorted[lastNumberIndex]);
+      currentDiceSorted.pop();
+    } else {
+      if (currentDiceSorted.length > 0){
+        var lastNumberIndex = currentDiceSorted.length - 1;
+        if (currentDiceSorted[lastNumberIndex] === checkMatchArray[0]){
+          checkMatchArray.push(currentDiceSorted[lastNumberIndex]);
+          currentDiceSorted.pop();
+          console.log("checkedarray",checkMatchArray, "currentdice", currentDiceSorted);
+        } else {
+          checkMatchArray = [currentDiceSorted[lastNumberIndex]];
+        }
+      }
+    }
+
+  }
+}
