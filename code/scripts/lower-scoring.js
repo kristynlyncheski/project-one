@@ -1,3 +1,5 @@
+console.log("lower scoring is loaded...");
+
 var threeKindP1 = document.querySelector(".player1 .score-3kind .scorecard-score");
 var threeKindP2 = document.querySelector(".player2 .score-3kind .scorecard-score");
 
@@ -35,7 +37,6 @@ var sum = function(array){
   }
   return sum;
 }
-
 
 function check3Kind(currentDiceSorted) {
 
@@ -113,8 +114,6 @@ function checkYahtzee(currentDiceSorted) {
   }
 }
 
-
-
 function checkChance(currentDiceSorted) {
   chanceScore = sum(currentDiceSorted);
 
@@ -157,8 +156,6 @@ function checkFullHouse(currentDiceSorted) {
    }
 }
 
-//Sm Straight
-
 function checkSmStraight(currentDiceSorted) {
   console.log("checking for a small straight...")
   smStraightScore = 30;
@@ -173,7 +170,7 @@ function checkSmStraight(currentDiceSorted) {
 
 
   if (currentDiceSorted.length >= 4) {
-    for (var i = 0; i < currentDiceSorted.length; i++) { //array length or 5?
+    for (var i = 0; i < currentDiceSorted.length; i++) {
       console.log("currentDiceSorted[i]",currentDiceSorted[i]);
       console.log("currentDiceSorted[i + 1]",currentDiceSorted[i + 1]);
       console.log(currentDiceSorted[i] === currentDiceSorted[i + 1]);
@@ -189,7 +186,8 @@ function checkSmStraight(currentDiceSorted) {
     if ((currentDiceSorted.toString().indexOf("1,2,3,4") > -1) ||
         (currentDiceSorted.toString().indexOf("2,3,4,5") > -1) ||
         (currentDiceSorted.toString().indexOf("3,4,5,6") > -1)) {
-      //https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/toString
+
+        // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/toString
 
         console.log("you've got a small straight");
         if (playerNumber === 1) {
@@ -199,46 +197,9 @@ function checkSmStraight(currentDiceSorted) {
           smStraightP1.innerText = "",
           smStraightP2.innerText = smStraightScore;
         }
-
-      }
-
+    }
   }
-
-
-
-
-
-
-  // if (xxx) {
-  //
-  //    console.log("you've got a small straight");
-  //
-  //    if (currentDiceSorted.toString() === "1,2,3,4" ||
-  //        currentDiceSorted.toString() === "2,3,4,5" ||
-  //        currentDiceSorted.toString() === "3,4,5,6") {
-  //
-  //       /
-  //
-  //      if (playerNumber === 1) {
-  //        smStraightP1.innerText = smStraightScore;
-  //        smStraightP2.innerText = "";
-  //      } else if (playerNumber === 2){
-  //        smStraightP1.innerText = "",
-  //        smStraightP2.innerText = smStraightScore;
-  //      }
-  //    }
-  //  }
 }
-
-
-//if duplicates, splice out
-// if array length is >= 4
-///check if
-// if i = (i+1) + 1
-// counter += 1;
-// counter >= 4;
-
-
 
 function checkLgStraight(currentDiceSorted) {
   console.log("checking for a large straight...")

@@ -23,6 +23,10 @@ var roll5 = document.querySelector(".roll-five .rolled-die-imgs");
 
 var rollDieArray = [roll1,roll2,roll3,roll4,roll5];
 
+var scoreDieArrayP1 = document.querySelectorAll(".player1 .score-item");
+var scoreDieArrayP2 = document.querySelectorAll(".player2 .score-item");
+
+
 var diceObj = {
   die1: {
     img: "./imgs/die1.png",

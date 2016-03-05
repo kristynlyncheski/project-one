@@ -9,8 +9,6 @@ var currentDice;
 var checkMatchArray;
 
 startButton.addEventListener("click", function(){
-  // openingPage.classList.add("hidden");
-  // gamePage.classList.remove("hidden");
   count += 1;
   console.log("count",count);
   startGame();
@@ -56,6 +54,7 @@ function startGame(){
   })
 
   clickDiceInit();
+  scorecardClickInit();
 }
 
 function clickDiceInit(){

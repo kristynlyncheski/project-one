@@ -73,27 +73,6 @@ function checkOnes() {
   }
 }
 
-
-// function checkOnes() {
-//   counter = 0;
-//   for (var i = 0; i < currentDice.length; i++) {
-//     if(currentDice[i] === 1){
-//       counter += 1;
-//       console.log("counter",counter);
-//     }
-//   }
-//   onesScore = parseInt(counter) * 1;
-//   console.log("onesScore",onesScore);
-//   console.log("what is the player number?",playerNumber);
-//   if (playerNumber === 1) {
-//     onesP1.innerText = onesScore;
-//     onesP2.innerText = "";
-//   } else if (playerNumber === 2){
-//     onesP1.innerText = "",
-//     onesP2.innerText = onesScore;
-//   }
-// }
-
 function checkTwos() {
   counter = 0;
   for (var i = 0; i < currentDice.length; i++) {
