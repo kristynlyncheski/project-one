@@ -75,14 +75,14 @@ button {
 }
 
 .players-turn p {
-  width:30%;
+  width:50%;
   float:left;
   font-size:34px;
   color:#584d56;
   font-family: 'Permanent Marker', cursive, sans-serif;
   text-align:left;
   padding:0 0 0 20px;
-  margin:10px 0 0 0;
+  margin:5px 0 0 0;
   text-decoration:underline;
 }
 
@@ -93,12 +93,23 @@ button {
   text-decoration:underline;
 }
 
+.end-game p {
+  width:50%;
+  float:left;
+  font-size:24px;
+  color:#368f8b;
+  font-family: 'Permanent Marker', cursive, sans-serif;
+  text-align:right;
+  padding:0 20px 0 0;
+  margin:5px 0 10px 0;
+}
+
 .note {
-  width:40%;
+  width:100%;
   text-align:center;
   margin:0;
   float:left;
-  min-height:70px;
+  min-height:40px;
 }
 
 .note p {
@@ -114,18 +125,6 @@ button {
   color:#368f8b;
 }
 
-.end-game p {
-  width:30%;
-  float:left;
-  font-size:24px;
-  color:#368f8b;
-  font-family: 'Permanent Marker', cursive, sans-serif;
-  text-align:right;
-  padding:0 20px 0 0;
-  margin:10px 0;
-}
-
-
 .rollable-dice {
   display:flex;
   flex-flow:row nowrap;
@@ -133,7 +132,12 @@ button {
   align-items:center;
   width:85%;
   margin:0 auto;
-  min-height:175px;
+  min-height:165px;
+}
+
+.rollable-dice > div {
+  width:20%;
+  text-align:center;
 }
 
 .rolled-die-imgs {
@@ -155,13 +159,13 @@ button {
   font-variant: small-caps;
   font-weight:600;
   margin:0;
-  padding: 5px 0 0 0;
+  padding: 10px 0 0 0;
   min-height: 54px;
 }
 
 button[name="roll"] {
   font-size:25px;
-  width:200px;
+  width:300px;
 }
 
 .scorecards::after {
@@ -189,7 +193,7 @@ button[name="roll"] {
   color:#d3b6af;
   text-decoration:underline;
   padding-top:15px;
-  margin:30px 0 20px 0;
+  margin:20px 0;
 }
 
 .upper-score,
@@ -216,6 +220,10 @@ button[name="roll"] {
   font-size:14px;
   min-height:20px;
   font-weight:400;
+}
+
+.scorecard-clicked .scorecard-score {
+  font-family: 'Permanent Marker', cursive, sans-serif;
 }
 
 .score-totals {
@@ -302,4 +310,8 @@ button[name="roll"] {
 
 .hidden {
   display:none;
+}
+
+.bold-opensans {
+  font-weight:600;
 }

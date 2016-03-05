@@ -1,8 +1,5 @@
 console.log("global js loaded...");
 
-var clickEvent = document.addEventListener("click",function(event){
-  console.log(event);
-})
 
 var openingPage = document.querySelector(".opening-page");
 var startButton = document.querySelector("button[name=start]");
@@ -27,8 +24,12 @@ var roll5 = document.querySelector(".roll-five .rolled-die-imgs");
 
 var rollDieArray = [roll1,roll2,roll3,roll4,roll5];
 
-var scoreDieArrayP1 = document.querySelectorAll(".player1 .score-item");
-var scoreDieArrayP2 = document.querySelectorAll(".player2 .score-item");
+// var scoreDieArrayP1 = document.querySelectorAll(".player1 .score-item");
+// var scoreDieArrayP2 = document.querySelectorAll(".player2 .score-item");
+
+var scoreDieArrayP1 = document.querySelectorAll(".player1 .scorecard-notclicked");
+var scoreDieArrayP2 = document.querySelectorAll(".player2 .scorecard-notclicked");
+
 
 
 var diceObj = {

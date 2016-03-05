@@ -1,6 +1,7 @@
 console.log("gameplay js is loaded...");
 
 var count = 0;
+var rollsLeft = 3;
 var playerNumber = 1;
 var notClicked;
 
@@ -10,6 +11,7 @@ var checkMatchArray;
 
 startButton.addEventListener("click", function(){
   count += 1;
+  rollsLeft -= 1;
   console.log("count",count);
   startGame();
 });
@@ -41,6 +43,7 @@ function startGame(){
 
     if (count < 3){
       count += 1;
+      rollsLeft -= 1;
       rollDice();
     }
 
@@ -129,18 +132,20 @@ function rollCount() {
     rollButton.classList.remove("hidden");
     pickMove.classList.add("hidden");
 
-    if (count === 1){
-      rollNumber.innerText = "Player #" + playerNumber + " Roll!"
-
-    }
+    // if (count === 1){
+    //   rollNumber.innerText = "Player #" + playerNumber + " Roll!"
+    //
+    // }
     // rollNumber.innerText = "Roll Again!"
-    rollNumber.innerText = "Go for Roll #" + (parseInt(count) + 1);
+    // rollNumber.innerText = "Go for Roll #" + (parseInt(count) + 1);
+
+    rollNumber.innerHTML = "<span class='bold-opensans'>Player " + playerNumber + ":</span> Roll! (" + (parseInt(rollsLeft)) + " Left)";
+
   } else {
 
     note.classList.add("hidden");
     rollButton.classList.add("hidden");
     pickMove.classList.remove("hidden");
-
 
     // rollNumber.innerText = "Player " + nextPlayerNumber() + "'s Turn";
   }
@@ -164,6 +169,7 @@ function nextPlayer(){
   playersTurn.innerText = playerNumber;
 
   count = 1;
+  rollsLeft = 2;
 
   for (var i = 0; i < rollDieArray.length; i++){
     rollDieArray[i].classList.remove("clicked");
