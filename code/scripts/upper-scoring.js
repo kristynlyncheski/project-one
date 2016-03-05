@@ -1,26 +1,8 @@
 console.log("upper scoring js is loaded...");
 
-var scorecardPlayer1 = document.querySelector(".player1");
-
-var scorecardPlayer2 = document.querySelector(".player2");
-
-var onesP1 = document.querySelector(".player1 .score-ones .scorecard-score");
-var onesP2 = document.querySelector(".player2 .score-ones .scorecard-score");
-
-var twosP1 = document.querySelector(".player1 .score-twos .scorecard-score");
-var twosP2 = document.querySelector(".player2 .score-twos .scorecard-score");
-
-var threesP1 = document.querySelector(".player1 .score-threes .scorecard-score");
-var threesP2 = document.querySelector(".player2 .score-threes .scorecard-score");
-
-var foursP1 = document.querySelector(".player1 .score-fours .scorecard-score");
-var foursP2 = document.querySelector(".player2 .score-fours .scorecard-score");
-
-var fivesP1 = document.querySelector(".player1 .score-fives .scorecard-score");
-var fivesP2 = document.querySelector(".player2 .score-fives .scorecard-score");
-
-var sixesP1 = document.querySelector(".player1 .score-sixes .scorecard-score");
-var sixesP2 = document.querySelector(".player2 .score-sixes .scorecard-score");
+// var scorecardPlayer1 = document.querySelector(".player1");
+//
+// var scorecardPlayer2 = document.querySelector(".player2");
 
 var counter;
 var currentDiceSorted;
@@ -45,7 +27,6 @@ function checkForScores() {
   checkFives();
   checkSixes();
 
-
   checkChance(currentDiceSorted);
   checkFullHouse(currentDiceSorted);
   checkSmStraight(currentDiceSorted);
@@ -56,104 +37,73 @@ function checkForScores() {
 }
 
 function checkOnes() {
-  counter = 0;
-    if (currentDice.indexOf(1) > -1) {
-      counter += 1;
-      console.log("counter",counter);
-    }
-  onesScore = parseInt(counter) * 1;
-  console.log("onesScore",onesScore);
-  console.log("what is the player number?",playerNumber);
-  if (playerNumber === 1) {
-    onesP1.innerText = onesScore;
-    onesP2.innerText = "";
-  } else if (playerNumber === 2){
-    onesP1.innerText = "",
-    onesP2.innerText = onesScore;
+
+  var onesPlayer = document.querySelector(".player" + playerNumber + " .score-ones.scorecard-notclicked .scorecard-score");
+
+  if (onesPlayer) {
+    onesScore = (diceObj["die1"]["count"]) * 1;
+    console.log("onesScore",onesScore);
+    console.log("what is the player number?",playerNumber);
+    onesPlayer.innerText = onesScore;
   }
 }
 
 function checkTwos() {
-  counter = 0;
-  for (var i = 0; i < currentDice.length; i++) {
-    if(currentDice[i] === 2){
-      counter += 1;
-    }
-  }
-  twosScore = parseInt(counter) * 2;
-  if (playerNumber === 1) {
-    twosP1.innerText = twosScore;
-    twosP2.innerText = "";
-  } else if (playerNumber === 2){
-    twosP1.innerText = "",
-    twosP2.innerText = twosScore;
+
+  var twosPlayer = document.querySelector(".player" + playerNumber + " .score-twos.scorecard-notclicked .scorecard-score");
+
+  if (twosPlayer) {
+    twosScore = (diceObj["die2"]["count"]) * 2;
+    console.log("twosScore",twosScore);
+    console.log("what is the player number?",playerNumber);
+    twosPlayer.innerText = twosScore;
   }
 }
 
 function checkThrees() {
-  counter = 0;
-  for (var i = 0; i < currentDice.length; i++) {
-    if(currentDice[i] === 3){
-      counter += 1;
-    }
-  }
-  threesScore = parseInt(counter) * 3;
-  if (playerNumber === 1) {
-    threesP1.innerText = threesScore;
-    threesP2.innerText = "";
-  } else if (playerNumber === 2){
-    threesP1.innerText = "",
-    threesP2.innerText = threesScore;
+
+  var threesPlayer = document.querySelector(".player" + playerNumber + " .score-threes.scorecard-notclicked .scorecard-score");
+
+  if (threesPlayer) {
+    threesScore = (diceObj["die3"]["count"]) * 3;
+    console.log("threesScore",threesScore);
+    console.log("what is the player number?",playerNumber);
+    threesPlayer.innerText = threesScore;
   }
 }
 
 function checkFours() {
-  counter = 0;
-  for (var i = 0; i < currentDice.length; i++) {
-    if(currentDice[i] === 4){
-      counter += 1;
-    }
-  }
-  foursScore = parseInt(counter) * 4;
-  if (playerNumber === 1) {
-    foursP1.innerText = foursScore;
-    foursP2.innerText = "";
-  } else if (playerNumber === 2){
-    foursP1.innerText = "",
-    foursP2.innerText = foursScore;
+
+  var foursPlayer = document.querySelector(".player" + playerNumber + " .score-fours.scorecard-notclicked .scorecard-score");
+
+  if (foursPlayer) {
+    foursScore = (diceObj["die4"]["count"]) * 4;
+    console.log("foursScore",foursScore);
+    console.log("what is the player number?",playerNumber);
+    foursPlayer.innerText = foursScore;
   }
 }
 
 function checkFives() {
-  counter = 0;
-  for (var i = 0; i < currentDice.length; i++) {
-    if(currentDice[i] === 5){
-      counter += 1;
-    }
-  }
-  fivesScore = parseInt(counter) * 5;
-  if (playerNumber === 1) {
-    fivesP1.innerText = fivesScore;
-    fivesP2.innerText = "";
-  } else if (playerNumber === 2){
-    fivesP1.innerText = "",
-    fivesP2.innerText = fivesScore;
+
+  var fivesPlayer = document.querySelector(".player" + playerNumber + " .score-fives.scorecard-notclicked .scorecard-score");
+
+  if (fivesPlayer) {
+    fivesScore = (diceObj["die5"]["count"]) * 5;
+    console.log("fivesScore",fivesScore);
+    console.log("what is the player number?",playerNumber);
+    fivesPlayer.innerText = fivesScore;
   }
 }
 
 function checkSixes() {
-  counter = 0;
-  for (var i = 0; i < currentDice.length; i++) {
-    if(currentDice[i] === 6){
-      counter += 1;
-    }
-  }
-  sixesScore = parseInt(counter) * 6;
-  if (playerNumber === 1) {
-    sixesP1.innerText = sixesScore;
-    sixesP2.innerText = "";
-  } else if (playerNumber === 2){
-    sixesP1.innerText = "",
-    sixesP2.innerText = sixesScore;
+
+  var sixesPlayer = document.querySelector(".player" + playerNumber + " .score-sixes.scorecard-notclicked .scorecard-score");
+
+  if (sixesPlayer) {
+    sixesScore = (diceObj["die6"]["count"]) * 6;
+    console.log("sixesScore",sixesScore);
+    console.log("what is the player number?",playerNumber);
+    sixesPlayer.innerText = sixesScore;
   }
 }

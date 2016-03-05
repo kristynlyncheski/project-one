@@ -51,10 +51,7 @@ function startGame(){
     console.log("count should increase when rollBtn clicked",count);
   });
 
-  endGame.addEventListener("click",function() {
-    gamePage.classList.add("hidden");
-    resultsPage.classList.remove("hidden");
-  })
+  endGame.addEventListener("click", gameOver);
 
   clickDiceInit();
   scorecardClickInit();
@@ -161,8 +158,43 @@ function nextPlayerNumber() {
   }
 }
 
+
+var currentPlayerNotClicked;
+
 function nextPlayer(){
   console.log("nextPlayer has been called...");
+
+  var currentPlayerSelector = ".player" + playerNumber + " .scorecard-notclicked .scorecard-score";
+
+  currentPlayerNotClicked = document.querySelectorAll(currentPlayerSelector);
+  console.log("currentPlayerNotClicked",currentPlayerNotClicked);
+  for (var i = 0; i < currentPlayerNotClicked.length; i++) {
+    console.log("clearing the inner text...");
+    currentPlayerNotClicked[i].innerText = "";
+  }
+
+  if (playerNumber === 2){
+    if (currentPlayerNotClicked.length < 1) {
+      console.log("there are no more moves for player 2");
+      gameOver();
+      return;
+    }
+  }
+
+
+
+
+  // clearing the scoreboard for all not cliekd items in current player before player changes
+  // var notclicked = doc.qs".notclicked";
+  // var element; (all elements) -- -array
+  // for loop through the array
+  // notclicked.element.innerText = "";
+
+
+  //if array = []; .length < 1 for player 2
+  //gameOver();
+  //return;
+
 
   playerNumber = nextPlayerNumber();
 
@@ -175,4 +207,14 @@ function nextPlayer(){
     rollDieArray[i].classList.remove("clicked");
     rollDieArray[i].classList.add("notclicked");
   }
+}
+
+
+var gameOver = function() {
+  console.log("endGame has been called...");
+  gamePage.classList.add("hidden");
+  resultsPage.classList.remove("hidden");
+
+  return;
+
 }

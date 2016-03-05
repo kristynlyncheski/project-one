@@ -8,7 +8,7 @@ function updatingCountInObj(currentDiceSorted) {
   for (var i = 0; i < currentDiceSorted.length; i++){
     if (currentDiceSorted[i] !== previous){
       counter = 0;
-
+      console.log("the count should be back at zero");
       console.log("not a match with previous number. counter is at", counter);
       previous = currentDiceSorted[i];
       console.log("previous number is now", previous);

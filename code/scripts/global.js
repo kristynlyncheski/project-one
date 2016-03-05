@@ -36,25 +36,31 @@ var diceObj = {
   die1: {
     img: "./imgs/die1.png",
     dieValue: 1,
+    count: 0,
   },
   die2: {
     img: "./imgs/die2.png",
     dieValue: 2,
+    count: 0,
   },
   die3: {
     img: "./imgs/die3.png",
     dieValue: 3,
+    count: 0,
   },
   die4: {
     img: "./imgs/die4.png",
     dieValue: 4,
+    count: 0,
   },
   die5: {
     img: "./imgs/die5.png",
     dieValue: 5,
+    count: 0,
   },
   die6: {
     img: "./imgs/die6.png",
     dieValue: 6,
+    count: 0,
   },
 };
