@@ -75,24 +75,47 @@ button {
 }
 
 .players-turn p {
-  width:50%;
+  width:30%;
   float:left;
-  font-size:24px;
-  color:#d3b6af;
+  font-size:34px;
+  color:#584d56;
   font-family: 'Permanent Marker', cursive, sans-serif;
   text-align:left;
   padding:0 0 0 20px;
-  margin:10px 0;
+  margin:10px 0 0 0;
+  text-decoration:underline;
 }
 
 .player-number {
-  font-size:24px;
-  color:#d3b6af;
+  font-size:34px;
+  color:#584d56;
   font-family: 'Permanent Marker', cursive, sans-serif;
+  text-decoration:underline;
+}
+
+.note {
+  width:40%;
+  text-align:center;
+  margin:0;
+  float:left;
+  min-height:70px;
+}
+
+.note p {
+  margin:10px 0 0 0;
+}
+
+.note span {
+  width:100%;
+  font-weight:600;
+  font-variant: small-caps;
+  font-size:28px;
+  line-height:28px;
+  color:#368f8b;
 }
 
 .end-game p {
-  width:50%;
+  width:30%;
   float:left;
   font-size:24px;
   color:#368f8b;
@@ -101,6 +124,7 @@ button {
   padding:0 20px 0 0;
   margin:10px 0;
 }
+
 
 .rollable-dice {
   display:flex;
@@ -122,12 +146,22 @@ button {
 }
 
 .roll-cta {
-  margin:0 auto;
-  width:200px;
+  text-align:center;
+}
+
+.pick-a-move {
+  color:#368f8b;
+  font-size:25px;
+  font-variant: small-caps;
+  font-weight:600;
+  margin:0;
+  padding: 5px 0 0 0;
+  min-height: 54px;
 }
 
 button[name="roll"] {
   font-size:25px;
+  width:200px;
 }
 
 .scorecards::after {
@@ -155,6 +189,7 @@ button[name="roll"] {
   color:#d3b6af;
   text-decoration:underline;
   padding-top:15px;
+  margin:30px 0 20px 0;
 }
 
 .upper-score,
@@ -179,7 +214,7 @@ button[name="roll"] {
 .scorecard-score {
   color:#d3b6af;
   font-size:14px;
-  min-height:30px;
+  min-height:20px;
   font-weight:400;
 }
 
@@ -192,13 +227,13 @@ button[name="roll"] {
 
 .total-titles {
   font-weight:400;
-  margin-top:10px;
+  margin:10px;
   text-align:right;
-  padding-right: 55px;
+  padding: 5px 55px 5px 0;
 }
 
 .total-dynamic {
-  font-weight:300px;
+  font-weight:300;
 }
 
 .grand-total {

@@ -88,6 +88,8 @@ function clickedScorecard(scoreItem) {
   grandTotalEl.innerText = grandTotal;
 
 
+  nextPlayer();
+  rollDice();
   // var scorecardScore = scoreItem.querySelector(".scorecard-score").innerText;
   // console.log("parent element", scoreItem.parentElement);
   // console.log("scorecardScore", scorecardScore);

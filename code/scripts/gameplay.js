@@ -120,11 +120,29 @@ function rollRandom() {
 }
 
 function rollCount() {
+  var note = document.querySelector(".note span");
+  var pickMove = document.querySelector(".pick-a-move");
+
+
   if (count < 3) {
+    note.classList.remove("hidden");
+    rollButton.classList.remove("hidden");
+    pickMove.classList.add("hidden");
+
+    if (count === 1){
+      rollNumber.innerText = "Player #" + playerNumber + " Roll!"
+
+    }
+    // rollNumber.innerText = "Roll Again!"
     rollNumber.innerText = "Go for Roll #" + (parseInt(count) + 1);
   } else {
 
-    rollNumber.innerText = "Player " + nextPlayerNumber() + "'s Turn";
+    note.classList.add("hidden");
+    rollButton.classList.add("hidden");
+    pickMove.classList.remove("hidden");
+
+
+    // rollNumber.innerText = "Player " + nextPlayerNumber() + "'s Turn";
   }
 
   return count;
@@ -145,7 +163,7 @@ function nextPlayer(){
 
   playersTurn.innerText = playerNumber;
 
-  count = 0;
+  count = 1;
 
   for (var i = 0; i < rollDieArray.length; i++){
     rollDieArray[i].classList.remove("clicked");

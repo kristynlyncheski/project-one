@@ -1,5 +1,9 @@
 console.log("global js loaded...");
 
+var clickEvent = document.addEventListener("click",function(event){
+  console.log(event);
+})
+
 var openingPage = document.querySelector(".opening-page");
 var startButton = document.querySelector("button[name=start]");
 

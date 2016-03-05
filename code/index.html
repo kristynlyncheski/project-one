@@ -5,7 +5,7 @@
     <title>Yahtzee</title>
     <link rel="stylesheet" href="./css/style.css" media="screen" title="no title" charset="utf-8">
     <link rel="stylesheet" href="./css/mqs.css" media="screen" title="no title" charset="utf-8">
-    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300|Permanent+Marker' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300,400,600|Permanent+Marker' rel='stylesheet' type='text/css'>
   </head>
   <body>
     <div class="container">
@@ -37,6 +37,10 @@
 
             <div class="players-turn">
               <p>Player <span class="player-number">1</span>'s turn!</p>
+            </div>
+
+            <div class="note">
+              <p><span>Click the Dice You Want to Keep<br /> or Select a Move in the ScoreCard</span></p>
             </div>
 
 
@@ -72,7 +76,10 @@
             </div>
 
             <div class="roll-cta">
-                <button type="button" name="roll"><span class="roll-number">Roll #2</span>!</button>
+
+              <button type="button" name="roll"><span class="roll-number">Roll #2</span>!</button>
+
+              <p class="pick-a-move hidden">Select a Move Below</p>
             </div>
 
           </div>
