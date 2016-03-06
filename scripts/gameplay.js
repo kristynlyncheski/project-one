@@ -91,7 +91,9 @@ function rollDice() {
     for (var i = 0; i < notClicked.length; i++){
       notClicked[i].className = "rolled-die-imgs notclicked";
     }
+    // rollShuffle();
     rollRandom();
+
   }
 
   checkForScores();
@@ -100,8 +102,33 @@ function rollDice() {
   // return currentDice;
 }
 
+// function rollShuffle(){
+//   var randomDieRoll;
+//   var shuffleCount = 6;
+//
+//   var intervalID = setInterval(function(){
+//     for (var i = 0; i < notClicked.length; i++) {
+//       randomDieRoll = Math.ceil(6 * Math.random());
+//       console.log("randomDieRoll is", randomDieRoll);
+//
+//       for (var die in diceObj) {
+//         if (randomDieRoll === diceObj[die].dieValue) {
+//           notClicked[i].src = diceObj[die].img;
+//         }
+//       }
+//     }
+//
+//     shuffleCount -= 1;
+//
+//     if (shuffleCount === 0) {
+//       clearInterval(intervalID);
+//     }
+//   }, 100);
+// }
+
 function rollRandom() {
   console.log("randomizing roll...");
+
   for (var i = 0; i < notClicked.length; i++) {
     var randomDieRoll = Math.ceil(6 * Math.random());
     console.log("randomDieRoll is", randomDieRoll);
