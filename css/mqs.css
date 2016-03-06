@@ -2,6 +2,14 @@
   .logo h1 {
     font-size:150px;
   }
+
+  .results-page {
+    padding:50px;
+  }
+
+  .score p {
+    padding:0 20px;
+  }
 }
 
 @media (max-width:560px){
@@ -11,5 +19,14 @@
 
   .player-scorecard-wrapper {
     width:100%;
+  }
+
+  .results-page {
+    padding:25px;
+  }
+
+  .score p {
+    padding:0 15px;
+    text-align:center !important;;
   }
 }

@@ -18,33 +18,12 @@ startButton.addEventListener("click", function(){
   count += 1;
   rollsLeft -= 1;
   console.log("count",count);
-  startGame();
+  // startGame();
+  initGame();
 });
 
-
-function startGame(){
-  console.log("the game has started...");
-
-  grandTotal = 0;
-
-  var grandTotalEl1 = document.querySelector(".player1 .grand-total .total-dynamic");
-  var grandTotalEl2 = document.querySelector(".player2 .grand-total .total-dynamic");
-  console.log("els", grandTotalEl1, grandTotalEl2);
-
-  grandTotalEl1.innerText = grandTotal;
-  grandTotalEl2.innerText = grandTotal;
-
-  playerNumber = 1;
-  playersTurn.innerText = playerNumber;
-  console.log("the player number is", playerNumber)
-
-  openingPage.classList.add("hidden");
-  gamePage.classList.remove("hidden");
-  resultsPage.classList.add("hidden");
-
-  // rollDice();
-  console.log("diceObj before shuffle", diceObj, "and currentDice before rollShuffle", currentDice);
-  rollShuffle();
+function initGame() {
+  console.log("the game has been initialized...")
 
   rollButton.addEventListener("click", function(){
     for (var die in diceObj) {
@@ -68,10 +47,46 @@ function startGame(){
     console.log("count should increase when rollBtn clicked",count);
   });
 
+
   endGame.addEventListener("click", gameOver);
 
   clickDiceInit();
   scorecardClickInit();
+  startGame();
+}
+
+
+function startGame(){
+  console.log("the game has started...");
+
+  //reset clicked dice
+  resetClicked();
+
+  //reset grand total
+  grandTotal = 0;
+
+  var grandTotalEl1 = document.querySelector(".player1 .grand-total .total-dynamic");
+  var grandTotalEl2 = document.querySelector(".player2 .grand-total .total-dynamic");
+  console.log("els", grandTotalEl1, grandTotalEl2);
+
+  grandTotalEl1.innerText = grandTotal;
+  grandTotalEl2.innerText = grandTotal;
+
+  //reset player number
+  playerNumber = 1;
+  playersTurn.innerText = playerNumber;
+  console.log("the player number is", playerNumber)
+
+  openingPage.classList.add("hidden");
+  gamePage.classList.remove("hidden");
+  resultsPage.classList.add("hidden");
+
+  // rollDice();
+  console.log("diceObj before shuffle", diceObj, "and currentDice before rollShuffle", currentDice);
+
+  rollShuffle();
+
+
 }
 
 function clickDiceInit(){
@@ -237,6 +252,10 @@ function nextPlayer(){
 
   playersTurn.innerText = playerNumber;
 
+  resetClicked();
+}
+
+function resetClicked() {
   count = 1;
   rollsLeft = 2;
 

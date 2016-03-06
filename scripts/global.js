@@ -3,10 +3,10 @@ console.log("global js loaded...");
 
 var openingPage = document.querySelector(".opening-page");
 var startButton = document.querySelector("button[name=start]");
-var instructionsButton = document.querySelector(".info");
+var instructionsButton = document.querySelector(".info span");
 
 var instructionsPage = document.querySelector(".instructions")
-var xBtn = document.querySelector(".exit");
+var xBtn = document.querySelector(".exit span");
 
 instructionsButton.addEventListener("click",function(){
   instructionsPage.classList.remove("hidden");
@@ -22,7 +22,7 @@ var gamePage = document.querySelector(".game");
 
 var playersTurn = document.querySelector(".player-number");
 
-var endGame = document.querySelector(".end-game");
+var endGame = document.querySelector(".end-game span");
 
 var rollButton = document.querySelector("button[name=roll]");
 var rollNumber = document.querySelector(".roll-number");

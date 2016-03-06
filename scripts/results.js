@@ -27,6 +27,9 @@ playAgainBtn.addEventListener("click",function(){
 })
 
 function playAgain () {
+
+  //reset scorecard
+
   for (var i = 0; i < scorecardScore.length; i++){
     scorecardScore[i].innerText = "";
   }
@@ -40,6 +43,8 @@ function playAgain () {
     scoreItemP2[i].classList.remove("scorecard-clicked");
     scoreItemP2[i].classList.add("scorecard-notclicked");
   }
+
+  count = 0;
 
   startGame();
 }
