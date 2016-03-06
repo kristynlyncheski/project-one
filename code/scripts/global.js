@@ -3,6 +3,20 @@ console.log("global js loaded...");
 
 var openingPage = document.querySelector(".opening-page");
 var startButton = document.querySelector("button[name=start]");
+var instructionsButton = document.querySelector(".info");
+
+var instructionsPage = document.querySelector(".instructions")
+var xBtn = document.querySelector(".exit");
+
+instructionsButton.addEventListener("click",function(){
+  instructionsPage.classList.remove("hidden");
+  openingPage.classList.add("hidden");
+})
+
+xBtn.addEventListener("click",function(){
+  instructionsPage.classList.add("hidden");
+  openingPage.classList.remove("hidden");
+})
 
 var gamePage = document.querySelector(".game");
 
@@ -32,7 +46,6 @@ var scorecardScore = document.querySelectorAll(".scorecard-score");
 
 var scoreDieArrayP1 = document.querySelectorAll(".player1 .scorecard-notclicked");
 var scoreDieArrayP2 = document.querySelectorAll(".player2 .scorecard-notclicked");
-
 
 
 var diceObj = {

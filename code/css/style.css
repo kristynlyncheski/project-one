@@ -21,7 +21,7 @@ body {
   flex-flow:column nowrap;
   justify-content: space-around;
   height:100vh;
-  padding:75px;
+  padding:75px 0;
 }
 
 .logo {
@@ -61,6 +61,74 @@ button {
   color:#368f8b;
 }
 
+/*Instructions Styles*/
+
+.instructions {
+  color:#160f29;
+  padding:5px 20px 10px 20px;
+}
+
+.instructions > div {
+  margin-bottom:20px;
+}
+
+.exit {
+  text-align:left;
+  color:#160f29;
+  font-family: 'Permanent Marker', cursive, sans-serif;
+  font-size:30px;
+  margin-bottom:0 !important;
+}
+
+.instructions h1 {
+  font-family: 'Permanent Marker', cursive, sans-serif;
+  font-size:30px;
+  color:#d3b6af;
+  margin: 0;
+}
+
+.instructions h1 ~ p {
+  margin:5px 20px 10px 20px;
+}
+
+.instructions-scoring {
+  margin-top:10px;
+  display:flex;
+  flex-flow:row wrap;
+  justify-content: space-around;
+}
+
+.how-to-score-element {
+  width:300px;
+}
+
+.how-to-score-element::after {
+  clear:both;
+  content:"";
+  display:block;
+}
+
+.instruction-die-imgs {
+  float:left;
+  max-width:50px;
+  padding:0 5px 0 0;
+  margin:3px 0 0 0;
+}
+
+.how-to-score-element p {
+  float:left;
+  width:250px;
+  padding:0 0 0 5px;
+  margin:0 0 20px 0;
+}
+
+.instructions .bold {
+  font-weight:600;
+}
+
+.instructions-bonus-note p {
+  margin-top: 5px;
+}
 
 /*Game Space Styles*/
 
@@ -75,7 +143,7 @@ button {
 }
 
 .players-turn p {
-  width:50%;
+  width:72%;
   float:left;
   font-size:34px;
   color:#584d56;
@@ -87,14 +155,14 @@ button {
 }
 
 .player-number {
-  font-size:34px;
+  font-size:35px;
   color:#584d56;
   font-family: 'Permanent Marker', cursive, sans-serif;
   text-decoration:underline;
 }
 
 .end-game p {
-  width:50%;
+  width:28%;
   float:left;
   font-size:24px;
   color:#368f8b;
@@ -109,19 +177,19 @@ button {
   text-align:center;
   margin:0;
   float:left;
-  min-height:40px;
+  min-height:70px;
 }
 
 .note p {
-  margin:10px 0 0 0;
+  margin:20px 0 0 0;
+  line-height:25px;
+  font-size:28px;
 }
 
 .note span {
   width:100%;
   font-weight:600;
   font-variant: small-caps;
-  font-size:28px;
-  line-height:28px;
   color:#368f8b;
 }
 
@@ -237,7 +305,7 @@ button[name="roll"] {
   font-weight:400;
   margin:10px;
   text-align:right;
-  padding: 5px 55px 5px 0;
+  padding: 0 55px 5px 0;
 }
 
 .total-dynamic {

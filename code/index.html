@@ -30,6 +30,92 @@
 
         <!--end of opening page-->
 
+        <!--instructions page-->
+
+        <div class="instructions hidden">
+          <div class="exit">X</div>
+          <div class="objective">
+            <h1>Objective</h1>
+            <p>Roll dice for scoring combinations and get the highest total possible!</p>
+          </div>
+          <div class="how-to-play">
+            <h1>How to Play</h1>
+            <p>On your turn, you may roll the dice up to 3 times, although you may stop and score after your first or second roll.</p>
+            <p>The player to get the highest scoring combination of the 13 categories wins. The game ends when both players have filled in all 13 plays.</p>
+            <p><span class="bold">First roll:</span> Roll all 5 dice. Click any dice you want to keep, or select a move in the scorecard to end your turn.</p>
+            <p><span class="bold">Second roll:</span> Reroll the dice you didn't click. Click any dice you want to keep, or select a move in the scorecard to end your turn.</p>
+            <p><span class="bold">Third roll:</span> Reroll the dice you didn't click. You must then select a move in the scorecard.</p>
+          </div>
+          <div class="how-to-score">
+            <h1>Scoring</h1>
+            <div class="instructions-bonus-note">
+              <p class="bold">If your upperscore total is 63 or more, you get a 35-point bonus.</p>
+            </div>
+
+            <div class="instructions-scoring">
+              <div class="how-to-score-element upper">
+                <img src="./imgs/score-die1.png" class="instruction-die-imgs" alt="">
+                <p><span class="bold">Ones</span><br />Score = # of ones * 1</p>
+              </div>
+              <div class="how-to-score-element upper">
+                <img src="./imgs/score-die2.png" class="instruction-die-imgs" alt="">
+                <p><span class="bold">Twos</span><br />Score = # of twos * 2</p>
+              </div>
+              <div class="how-to-score-element upper">
+                <img src="./imgs/score-die3.png" class="instruction-die-imgs" alt="">
+                <p><span class="bold">Threes</span><br />Score = # of threes * 3</p>
+              </div>
+              <div class="how-to-score-element upper">
+                <img src="./imgs/score-die4.png" class="instruction-die-imgs" alt="">
+                <p><span class="bold">Fours</span><br />Score = # of fours * 4</p>
+              </div>
+              <div class="how-to-score-element upper">
+                <img src="./imgs/score-die5.png" class="instruction-die-imgs" alt="">
+                <p><span class="bold">Fives</span><br />Score = # of fives * 5</p>
+              </div>
+              <div class="how-to-score-element upper">
+                <img src="./imgs/score-die6.png" class="instruction-die-imgs" alt="">
+                <p><span class="bold">Sixes</span><br />Score = # of sixes * 6</p>
+              </div>
+
+              <div class="how-to-score-element">
+                <img src="./imgs/score-die-3kind.png" class="instruction-die-imgs" alt="">
+                <p><span class="bold">3 of a Kind</span><br />3 or more of a number // Sum</p>
+              </div>
+              <div class="how-to-score-element">
+                <img src="./imgs/score-die-4kind.png" class="instruction-die-imgs" alt="">
+                <p><span class="bold">4 of a Kind</span><br />4 or more of a number // Sum</p>
+              </div>
+              <div class="how-to-score-element">
+                <img src="./imgs/score-die-FH.png" class="instruction-die-imgs" alt="">
+                <p><span class="bold">Full House</span><br />3 of a kind &amp; a pair // 25pts</p>
+              </div>
+              <div class="how-to-score-element">
+                <img src="./imgs/score-die-SS.png" class="instruction-die-imgs" alt="">
+                <p><span class="bold">Small Straight</span><br />A run of 4 or more dice // 30pts</p>
+              </div>
+              <div class="how-to-score-element">
+                <img src="./imgs/score-die-LS.png" class="instruction-die-imgs" alt="">
+                <p><span class="bold">Large Straight</span><br />A run of 5 dice // 40pts</p>
+              </div>
+
+              <div class="how-to-score-element">
+                <img src="./imgs/score-die-chance.png" class="instruction-die-imgs" alt="">
+                <p><span class="bold">Chance</span><br />Any combination // Sum</p>
+              </div>
+              <div class="how-to-score-element">
+                <img src="./imgs/score-die-Y.png" class="instruction-die-imgs" alt="">
+                <p><span class="bold">Yahtzee</span><br />5 of a number // 50pts</p>
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+
+        <!--end of instructions page-->
+
         <!--game space-->
 
         <div class="game hidden">
@@ -46,7 +132,7 @@
           </div>
 
           <div class="note">
-            <p><span>Click the Dice You Want to Keep or Select a Move in the ScoreCard Below</span></p>
+            <p><span>Click the Dice to Keep or Select a Move Below</span></p>
           </div>
 
           <div class="game-space">

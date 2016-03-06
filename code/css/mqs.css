@@ -1,4 +1,14 @@
+@media (max-width:750px){
+  .logo h1 {
+    font-size:150px;
+  }
+}
+
 @media (max-width:560px){
+  .logo h1 {
+    font-size:115px;
+  }
+
   .player-scorecard-wrapper {
     width:100%;
   }

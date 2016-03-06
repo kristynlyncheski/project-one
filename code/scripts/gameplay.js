@@ -23,6 +23,10 @@ startButton.addEventListener("click", function(){
 function startGame(){
   console.log("the game has started...");
 
+  playerNumber = 1;
+  playersTurn.innerText = playerNumber;
+  console.log("the player number is", playerNumber)
+
   openingPage.classList.add("hidden");
   gamePage.classList.remove("hidden");
   resultsPage.classList.add("hidden");
