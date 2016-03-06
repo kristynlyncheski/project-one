@@ -283,8 +283,10 @@ button[name="roll"] {
 }
 
 .score p {
-  font-family: 'Permanent Marker', cursive, sans-serif;
-  color:#d3b6af;
+  /*font-family: 'Permanent Marker', cursive, sans-serif;*/
+  font-weight:600;
+  /*color:#d3b6af;*/
+  color:#584d56;
   font-size:35px;
   float:left;
   width:50%;
@@ -298,6 +300,13 @@ button[name="roll"] {
 
 .score p:last-child {
   text-align:left;
+}
+
+.score span {
+  /*font-family: 'Permanent Marker', cursive, sans-serif;*/
+  font-weight:300;
+  font-size:35px;
+
 }
 
 .final-score {

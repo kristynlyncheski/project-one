@@ -5,10 +5,20 @@ var previous = 0;
 function updatingCountInObj(currentDiceSorted) {
   counter = 0;
 
+  for (var die in diceObj){
+    console.log("count of dievalue" + diceObj[die]["dieValue"] + " is " + diceObj[die]["count"]);
+    diceObj[die]["count"] = 0;
+    console.log("count of dievalue" + diceObj[die]["dieValue"] + " is " + diceObj[die]["count"]);
+  }
+
+  console.log("diceObj - counts should all be 0", diceObj);
+
+  console.log("diceObj in the updatingCount function before the for loop", diceObj);
   for (var i = 0; i < currentDiceSorted.length; i++){
     if (currentDiceSorted[i] !== previous){
       counter = 0;
       console.log("the count should be back at zero");
+      console.log("diceObj in the updatingCount function", diceObj);
       console.log("not a match with previous number. counter is at", counter);
       previous = currentDiceSorted[i];
       console.log("previous number is now", previous);

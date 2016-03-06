@@ -14,7 +14,8 @@ var rollButton = document.querySelector("button[name=roll]");
 var rollNumber = document.querySelector(".roll-number");
 
 var resultsPage = document.querySelector(".results-page");
-var playAgain = document.querySelector("button[name=play-again]");
+var winnerMessage = document.querySelector(".winner-message");
+var playAgainBtn = document.querySelector("button[name=play-again]");
 
 var roll1 = document.querySelector(".roll-one .rolled-die-imgs");
 var roll2 = document.querySelector(".roll-two .rolled-die-imgs");
@@ -24,8 +25,10 @@ var roll5 = document.querySelector(".roll-five .rolled-die-imgs");
 
 var rollDieArray = [roll1,roll2,roll3,roll4,roll5];
 
-// var scoreDieArrayP1 = document.querySelectorAll(".player1 .score-item");
-// var scoreDieArrayP2 = document.querySelectorAll(".player2 .score-item");
+var scoreItemP1 = document.querySelectorAll(".player1 .score-item");
+var scoreItemP2 = document.querySelectorAll(".player2 .score-item");
+
+var scorecardScore = document.querySelectorAll(".scorecard-score");
 
 var scoreDieArrayP1 = document.querySelectorAll(".player1 .scorecard-notclicked");
 var scoreDieArrayP2 = document.querySelectorAll(".player2 .scorecard-notclicked");

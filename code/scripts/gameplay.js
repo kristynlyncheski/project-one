@@ -9,17 +9,15 @@ var currentDice;
 
 var checkMatchArray;
 
+var p1GrandTotal;
+var p2GrandTotal
+
 startButton.addEventListener("click", function(){
   count += 1;
   rollsLeft -= 1;
   console.log("count",count);
   startGame();
 });
-
-playAgain.addEventListener("click",function(){
-  console.log("this",this);
-  startGame();
-})
 
 
 function startGame(){
@@ -129,13 +127,6 @@ function rollCount() {
     rollButton.classList.remove("hidden");
     pickMove.classList.add("hidden");
 
-    // if (count === 1){
-    //   rollNumber.innerText = "Player #" + playerNumber + " Roll!"
-    //
-    // }
-    // rollNumber.innerText = "Roll Again!"
-    // rollNumber.innerText = "Go for Roll #" + (parseInt(count) + 1);
-
     rollNumber.innerHTML = "<span class='bold-opensans'>Player " + playerNumber + ":</span> Roll! (" + (parseInt(rollsLeft)) + " Left)";
 
   } else {
@@ -144,7 +135,6 @@ function rollCount() {
     rollButton.classList.add("hidden");
     pickMove.classList.remove("hidden");
 
-    // rollNumber.innerText = "Player " + nextPlayerNumber() + "'s Turn";
   }
 
   return count;
@@ -176,25 +166,11 @@ function nextPlayer(){
   if (playerNumber === 2){
     if (currentPlayerNotClicked.length < 1) {
       console.log("there are no more moves for player 2");
+
       gameOver();
       return;
     }
   }
-
-
-
-
-  // clearing the scoreboard for all not cliekd items in current player before player changes
-  // var notclicked = doc.qs".notclicked";
-  // var element; (all elements) -- -array
-  // for loop through the array
-  // notclicked.element.innerText = "";
-
-
-  //if array = []; .length < 1 for player 2
-  //gameOver();
-  //return;
-
 
   playerNumber = nextPlayerNumber();
 
@@ -209,12 +185,17 @@ function nextPlayer(){
   }
 }
 
-
 var gameOver = function() {
   console.log("endGame has been called...");
   gamePage.classList.add("hidden");
   resultsPage.classList.remove("hidden");
 
-  return;
+  p1GrandTotal = document.querySelector(".player1 .grand-total .total-dynamic").innerText;
+  p2GrandTotal = document.querySelector(".player2 .grand-total .total-dynamic").innerText;
 
+  console.log("p1GrandTotal",p1GrandTotal, "p2GrandTotal",p2GrandTotal);
+
+  showResults();
+
+  return;
 }
