@@ -222,6 +222,8 @@ function nextPlayer(){
     currentPlayerNotClicked[i].innerText = "";
   }
 
+  rollShuffle();
+
   if (playerNumber === 2){
     if (currentPlayerNotClicked.length < 1) {
       console.log("there are no more moves for player 2");
