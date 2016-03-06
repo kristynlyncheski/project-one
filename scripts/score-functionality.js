@@ -79,7 +79,7 @@ function clickedScorecard(scoreItem) {
 
   console.log("grandSelector", grandSelector, "grandTotalEl", grandTotalEl);
 
-  var grandTotal = upperScore + bonusScore + lowerScore;
+  grandTotal = upperScore + bonusScore + lowerScore;
 
   //declaring innerText
   upperTotalEl.innerText = upperScore;

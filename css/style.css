@@ -14,6 +14,40 @@ body {
 
 }
 
+/*Keyframes*/
+
+/*https://css-tricks.com/snippets/css/keyframe-animation-syntax/*/
+
+@keyframes pulse {
+  0%    { transform:scale(1) rotate(-15deg);}
+  50%   { transform:scale(1.2) rotate(-15deg);; }
+  100%  { transform:scale(1) rotate(-15deg);; }
+}
+
+@-webkit-keyframes pulse {
+  0%    { transform:scale(1) rotate(-15deg); }
+  50%   { transform:scale(1.2) rotate(-15deg);; }
+  100%  { transform:scale(1) rotate(-15deg);; }
+}
+
+@keyframes spin {
+  0%  { transform:rotate(0); }
+  20% { transform:rotate(500deg); }
+  40% { transform:rotate(900deg); }
+  60% { transform:rotate(1200deg); }
+  80% { transform:rotate(1340deg); }
+  100% { transform:rotate(1442deg); }
+}
+
+@-webkit-keyframes spin {
+  0%  { transform:rotate(0); }
+  20% { transform:rotate(500deg); }
+  40% { transform:rotate(900deg); }
+  60% { transform:rotate(1200deg); }
+  80% { transform:rotate(1340deg); }
+  100% { transform:rotate(1442deg); }
+}
+
 /*Opening Page Styles*/
 
 .opening-page {
@@ -30,11 +64,13 @@ body {
 
 .logo h1 {
   font-size:200px;
-  transform:rotate(-15deg);
+  /*transform:rotate(-15deg);*/
   font-weight:normal;
   margin:0 0 30px 0;
   font-family: 'Permanent Marker', cursive, sans-serif;
   color:#160f29;
+  animation: pulse 2s infinite;
+  -webkit-animation: pulse 2s infinite;
 }
 
 .cta {
@@ -193,6 +229,11 @@ button {
   color:#368f8b;
 }
 
+.spin {
+  animation: spin .6s 1;
+  -webkit-animation: spin .6s 1;
+}
+
 .rollable-dice {
   display:flex;
   flex-flow:row nowrap;
@@ -333,6 +374,8 @@ button[name="roll"] {
   justify-content: space-around;
   height:100vh;
   padding:75px;
+  background-image:url("../imgs/confetti.gif");
+  background-size:contain;
 }
 
 .results-page h1 {
@@ -342,6 +385,8 @@ button[name="roll"] {
   font-family: 'Permanent Marker', cursive, sans-serif;
   color:#160f29;
   margin:20px 0;
+  animation: pulse 2s infinite;
+  -webkit-animation: pulse 2s infinite;
 }
 
 .score::after {
@@ -374,7 +419,6 @@ button[name="roll"] {
   /*font-family: 'Permanent Marker', cursive, sans-serif;*/
   font-weight:300;
   font-size:35px;
-
 }
 
 .final-score {

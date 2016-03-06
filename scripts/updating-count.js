@@ -36,7 +36,7 @@ function updatingCountInObj(currentDiceSorted) {
       }
     }
   }
-
+  
   check3Kind(currentDiceSorted);
   check4Kind(currentDiceSorted);
   checkYahtzee(currentDiceSorted);

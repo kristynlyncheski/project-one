@@ -11,6 +11,8 @@ var checkMatchArray;
 
 var p1GrandTotal;
 var p2GrandTotal
+var grandTotal;
+
 
 startButton.addEventListener("click", function(){
   count += 1;
@@ -23,6 +25,15 @@ startButton.addEventListener("click", function(){
 function startGame(){
   console.log("the game has started...");
 
+  grandTotal = 0;
+
+  var grandTotalEl1 = document.querySelector(".player1 .grand-total .total-dynamic");
+  var grandTotalEl2 = document.querySelector(".player2 .grand-total .total-dynamic");
+  console.log("els", grandTotalEl1, grandTotalEl2);
+
+  grandTotalEl1.innerText = grandTotal;
+  grandTotalEl2.innerText = grandTotal;
+
   playerNumber = 1;
   playersTurn.innerText = playerNumber;
   console.log("the player number is", playerNumber)
@@ -31,7 +42,9 @@ function startGame(){
   gamePage.classList.remove("hidden");
   resultsPage.classList.add("hidden");
 
-  rollDice();
+  // rollDice();
+  console.log("diceObj before shuffle", diceObj, "and currentDice before rollShuffle", currentDice);
+  rollShuffle();
 
   rollButton.addEventListener("click", function(){
     for (var die in diceObj) {
@@ -46,7 +59,9 @@ function startGame(){
     if (count < 3){
       count += 1;
       rollsLeft -= 1;
-      rollDice();
+      console.log("diceObj before shuffle", diceObj, "and currentDice before rollShuffle", currentDice);
+      rollShuffle();
+      // rollDice();
     }
 
     console.log("rollBtn clicked");
@@ -91,7 +106,6 @@ function rollDice() {
     for (var i = 0; i < notClicked.length; i++){
       notClicked[i].className = "rolled-die-imgs notclicked";
     }
-    // rollShuffle();
     rollRandom();
 
   }
@@ -102,29 +116,42 @@ function rollDice() {
   // return currentDice;
 }
 
-// function rollShuffle(){
-//   var randomDieRoll;
-//   var shuffleCount = 6;
-//
-//   var intervalID = setInterval(function(){
-//     for (var i = 0; i < notClicked.length; i++) {
-//       randomDieRoll = Math.ceil(6 * Math.random());
-//       console.log("randomDieRoll is", randomDieRoll);
-//
-//       for (var die in diceObj) {
-//         if (randomDieRoll === diceObj[die].dieValue) {
-//           notClicked[i].src = diceObj[die].img;
-//         }
-//       }
-//     }
-//
-//     shuffleCount -= 1;
-//
-//     if (shuffleCount === 0) {
-//       clearInterval(intervalID);
-//     }
-//   }, 100);
-// }
+function rollShuffle(){
+  console.log("the dice are being shuffled first...");
+  var randomDieRoll;
+  var shuffleCount = 6;
+
+  notClicked = document.querySelectorAll(".notclicked");
+
+  var intervalID = setInterval(function(){
+    for (var i = 0; i < notClicked.length; i++) {
+      notClicked[i].classList.add("spin");
+      console.log("should have class spin", notClicked[i]);
+      randomDieRoll = Math.ceil(6 * Math.random());
+      console.log("randomDieRoll is in interval", randomDieRoll);
+
+      for (var die in diceObj) {
+        if (randomDieRoll === diceObj[die].dieValue) {
+          notClicked[i].src = diceObj[die].img;
+        }
+      }
+    }
+
+    shuffleCount -= 1;
+
+    if (shuffleCount === 0) {
+      clearInterval(intervalID);
+      for (var i = 0; i < notClicked.length; i++){
+        notClicked[i].classList.remove("spin");
+        console.log("should not have class spin", notClicked[i]);
+      }
+      rollDice();
+    }
+  }, 100);
+  console.log("diceObj after shuffle", diceObj, "and currentDice after rollShuffle", currentDice);
+  // rollRandom();
+
+}
 
 function rollRandom() {
   console.log("randomizing roll...");
@@ -149,6 +176,7 @@ function rollRandom() {
 }
 
 function rollCount() {
+  console.log("rolls are being counted here...");
   var note = document.querySelector(".note span");
   var pickMove = document.querySelector(".pick-a-move");
 
